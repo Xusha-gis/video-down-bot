@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: video-yukla-bot
+    env: python
+    region: oregon
+    plan: free
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: API_TOKEN
+        sync: false
+    pythonVersion: 3.13.4
