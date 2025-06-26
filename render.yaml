@@ -1,13 +1,12 @@
 services:
   - type: web
-    name: video-yukla-bot
+    name: video-down-bot
     env: python
-    region: oregon
+    region: frankfurt
     plan: free
-    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
+    pythonVersion: 3.13.4
     envVars:
       - key: API_TOKEN
         sync: false
-    pythonVersion: 3.13.4
